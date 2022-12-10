@@ -50,5 +50,5 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:latest
-            ${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:$VERSION
+            "${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest"
+            "${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}"
