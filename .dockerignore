@@ -4,3 +4,4 @@
 .git
 Dockerfile*
 LICENSE
+renovate.json
