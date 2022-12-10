@@ -1,4 +1,4 @@
-FROM debian:stretch-slim 
+FROM debian:bullseye-slim 
 
 ARG JAVA_VERSION="17.0.5-amzn"
 ARG SCALA_VERSION="3.2.1"
