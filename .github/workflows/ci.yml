@@ -10,7 +10,7 @@ on:
       - 'README.md'
       - 'renovate.json'
       - 'LICENSE'
-      - '.github'
+      - '.github/**'
       - '.gitattributes'
 
 jobs:
