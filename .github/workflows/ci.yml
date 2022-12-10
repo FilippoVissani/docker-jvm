@@ -15,7 +15,7 @@ on:
 
 jobs:
   release:
-    name: Push Docker image to Docker Hub
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
