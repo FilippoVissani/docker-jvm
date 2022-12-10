@@ -1,6 +1,5 @@
 FROM debian:stretch-slim 
 
-ARG VARIANT="jammy"
 ARG JAVA_VERSION="17.0.5-amzn"
 ARG SCALA_VERSION="3.2.1"
 ARG KOTLIN_VERSION="1.7.21"
