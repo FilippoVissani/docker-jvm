@@ -12,6 +12,7 @@ on:
       - 'LICENSE'
       - '.github/**'
       - '.gitattributes'
+      - 'dependabot.yml'
 
 jobs:
   release:
