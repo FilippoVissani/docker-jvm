@@ -25,6 +25,8 @@ RUN apt-get update && \
 # Switching to non-root user to install SDKMAN! 
 USER $USER_UID:$USER_GID
 
+WORKDIR /home/$USER_NAME
+
 # Downloading SDKMAN! 
 RUN curl -s "https://get.sdkman.io" | bash
 
