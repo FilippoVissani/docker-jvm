@@ -18,7 +18,7 @@ RUN groupadd -g $USER_GID $USER_NAME && \
 
 # Installing basic packages 
 RUN apt-get update && \
-	apt-get install -y zip unzip curl git && \
+	apt-get install -y zip unzip curl git sudo && \
 	rm -rf /var/lib/apt/lists/* && \
 	rm -rf /tmp/*
 
@@ -40,3 +40,5 @@ RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && \
     yes | sdk install maven $MAVEN_VERSION && \
     rm -rf $HOME/.sdkman/archives/* && \
     rm -rf $HOME/.sdkman/tmp/*"
+
+CMD /bin/bash
