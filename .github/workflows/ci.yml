@@ -46,10 +46,10 @@ jobs:
 
       - name: Create version tag
         if: ${{ github.event_name != 'pull_request' }}
-        - uses: rickstaa/action-create-tag@v1.5.0
-          with:
-            tag: "${{ env.VERSION }}"
-            message: "Release ${{ env.VERSION }}"
+        uses: rickstaa/action-create-tag@v1.5.0
+        with:
+          tag: "${{ env.VERSION }}"
+          message: "Release ${{ env.VERSION }}"
         
       - name: Build and push
         uses: docker/build-push-action@v3
