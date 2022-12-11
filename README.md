@@ -16,6 +16,6 @@ A Docker image with the most used JVM languages and build tools ([Docker Hub pag
 ## Run on linux
 
 ```bash
-filippovissani/docker-jvm
+docker pull filippovissani/docker-jvm
 docker run -it filippovissani/docker-jvm
 ```
