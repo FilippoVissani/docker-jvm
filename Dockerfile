@@ -23,3 +23,4 @@ RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && \
     yes | sdk install gradle $GRADLE_VERSION && \
     yes | sdk install sbt $SBT_VERSION && \
     yes | sdk install maven $MAVEN_VERSION"
+WORKDIR /home/developer
