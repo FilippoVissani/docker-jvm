@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -yq \
     sudo \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 RUN useradd -l -u 33333 -G sudo -md /home/developer -s /bin/bash -p developer developer
-USER gitpod
+USER developer
 RUN curl -s "https://get.sdkman.io" | bash
 RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && \
     yes | sdk install java $JAVA_VERSION && \
