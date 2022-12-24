@@ -9,14 +9,17 @@ RUN apt-get update && apt-get install -yq \
     git \
     git-lfs \
     sudo \
+    curl \
+    unzip \
+    zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 RUN useradd -l -u 33333 -G sudo -md /home/developer -s /bin/bash -p developer developer
 USER developer
 RUN curl -s "https://get.sdkman.io" | bash
-RUN source $HOME/.sdkman/bin/sdkman-init.sh && \
+RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && \
     yes | sdk install java $JAVA_VERSION && \
     yes | sdk install scala $SCALA_VERSION && \
     yes | sdk install kotlin $KOTLIN_VERSION && \
     yes | sdk install gradle $GRADLE_VERSION && \
     yes | sdk install sbt $SBT_VERSION && \
-    yes | sdk install maven $MAVEN_VERSION
+    yes | sdk install maven $MAVEN_VERSION"
